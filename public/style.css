@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=PT+Sans&family=Playfair+Display&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+  z-index: -1;
+}
+
+svg:last-of-type {
+  padding-top: 0;
+}
+
+svg {
+  padding-top: 5vh;
+}
+
+svg:first-of-type {
+  z-index: -2;
+  padding-top: 10vh;
+}
+
+.first {
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+  .first-container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-top: 10vh;
+  }
+
+  .first-container div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first-container img {
+    padding: 0 3.5em 0 5em;
+    max-width: 60vw;
+  }
+
+  .first-container div {
+    padding: 3.5em 7.5em 0 0.5em;
+    max-width: 40vw;
+    color: #263b7c;
+    font-family: 'Playfair Display';
+    font-size: 1.3em;
+    margin: auto 0;
+  }
+
+.second {
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #d1dbf0;
+  color: #263b7c;
+  /*background: linear-gradient(to bottom, #fff, #d1dbf0);*/
+}
+
+.third {
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.second, .third {
+  padding: 10em;
+  font-family: 'Playfair Display';
+}
+
+.second h2, .third h2 {
+  font-family: 'PT Sans';
+}
+
+.blue-mobile {
+  display: none;
+}
+
+/* ========== BUTTONS ========== */
+
+button {
+  font-family: 'PT Sans';
+  font-size: 1em;
+  margin: 1em auto 1em 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0.5rem 2rem;
+  line-height: 1.5;
+  border-radius: 2rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, 
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button.register-btn {
+    border: 2px solid #fff;
+    background: #324EA3;
+    color: #fff;
+  }
+
+    button.register-btn:hover {
+      background: #fff;
+      color: #324EA3;
+    }
+
+    button.register-btn:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.35);
+      background: #fff;
+      color: #324EA3;
+    }
+
+  button.start {
+    background: #324EA3;
+    color: #fff;
+    font-size: 0.9em;
+  }
+
+    button.start:focus {
+      box-shadow: 0 0 0 0.2rem rgba(50, 78, 163, 0.35);
+    }
+
+    button.start:hover {
+      border: 2px solid #324EA3;
+      color: #324EA3;
+      background: #fff;
+    }
+
+
+/* ========== NAVBAR ========== */
+
+nav, nav a {
+  color: white;
+/*  text-transform: uppercase;*/
+  font-family: "PT Sans";
+  font-weight: 500;
+  font-size: 1.05em;
+  text-decoration: none;
+}
+
+nav ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  list-style: none;
+  display: flex;
+  padding-right: 150px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+nav span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 150px;
+  font-weight: 600;
+  font-size: 2em;
+  font-family: 'PT Sans';
+  height: 100px;
+  line-height: 100px;
+}
+
+nav li {
+  padding-left: 2em;
+  height: 100px;
+  line-height: 100px;
+}
+
+  #nav + .nav-btn i {
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+  }
+
+  #nav:checked + .nav-btn i {
+    background: #324EA3;
+  }
+
+  #nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(5px) rotate(-135deg);
+  }
+
+  #nav:checked + .nav-btn i:nth-child(2) {
+    transform: translateY(-5px) rotate(135deg);
+  }
+
+  #nav:checked + label.nav-btn {
+    transform: translateX(-17px);
+  }
+
+  #nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+/*      transform: scale(1);*/
+    visibility: visible;
+  }
+
+  #nav:checked ~ .nav-wrapper ul li a {
+    transform: translateX(0);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/*@media (min-width: 768px) and (max-width: 1024px) {
+
+}*/
+
+
+
+/* ========= NAV BREAK POINT ========= */
+@media screen and (max-width: 864px) {
+
+  body.fixedPos {
+    position: fixed;
+    overflow-y: scroll;
+  }
+
+  nav li {
+    padding-left: 0;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .nav-wrapper {
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 100%; /* used to be 50% */
+    height: 100%; /* used to be 100% */
+    background: #fff;
+    /*transform: scale(0);*/ /* necessary to make invisible nav links unclickable */
+    visibility: hidden;
+  }
+
+  .nav-wrapper ul {
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding-right: 10vw;
+    line-height: 2em;
+  }
+
+  .nav-wrapper ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  .nav-wrapper ul li a {
+    padding: 10px 0;
+    color: #324EA3;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+  }
+
+  button.register-btn {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    color: #324EA3;
+    background: #fff;
+  }
+
+/*  .nav-wrapper ul li a::before {
+    bottom: 10px;
+    background-color: #324EA3;
+  }*/
+
+
+  .nav-btn {
+    position: absolute; /* used to be fixed */
+    top: 29px;
+    right: 10vw;
+    display: block;
+    cursor: pointer;
+    z-index: 9998;
+  }
+
+  .nav-btn i {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background: #fff;
+  }
+
+  .nav-btn i:nth-child(1) {
+    margin-top: calc((2em - 15px - 3px)/2);
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  .nav-btn i:nth-child(2) {
+    margin-top: 6px;
+    margin-bottom: calc((2em - 15px - 3px)/2);
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  #nav:checked + label.nav-btn {
+    right: -10vw;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+
+  .blue-mobile {
+    display: block;
+    background: #324EA3;
+    height: 6vh;
+  }
+
+  svg {
+    padding-top: 7.5vh;
+  }
+
+  svg:last-of-type {
+    padding-top: 5vh;
+  }
+
+  svg:first-of-type {
+    padding-top: 11vh;
+  }
+  
+  nav span {
+    padding-left: 10vw;
+  }
+
+  nav ul {
+    padding: 0;
+    margin-right: 10vw;
+  }
+
+  .first {
+    overflow-y: auto;
+  }
+
+  .first-container {
+    flex-direction: column;
+  }
+
+    .first-container img, .first-container div {
+      max-width: 80vw;
+    }
+
+    .first-container img {
+      padding: 0;
+    }
+
+    .first-container div {
+      padding: 0;
+      text-align: center;
+    }
+
+    button.start {
+      margin: 0 auto;
+    }
+  
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .blue-mobile {
+    display: block;
+    background: #324EA3;
+    height: 11vh;
+  }
+
+  nav span {
+    padding-left: 10vw;
+  }
+
+  #nav:checked + label.nav-btn {
+    transform: translateX(0);
+  }
+
+  svg {
+    padding-top: 10vh;
+  }
+
+  .first {
+    overflow-x: hidden;
+  }
+
+/*  .first-container {
+    padding-top: 20vh;
+  }*/
+}
