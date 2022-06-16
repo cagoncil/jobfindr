@@ -1,0 +1,15 @@
+.second {
+    min-height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #d1dbf0;
+    color: #263b7c;
+    /*background: linear-gradient(to bottom, #fff, #d1dbf0);*/
+    padding: 10em;
+    font-family: 'Playfair Display';
+  }
+
+  .second h2 {
+    font-family: 'PT Sans';
+  }

@@ -1,0 +1,14 @@
+.third {
+    min-height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10em;
+    font-family: 'Playfair Display';
+}
+  
+.third h2 {
+    font-family: 'PT Sans';
+}
+  

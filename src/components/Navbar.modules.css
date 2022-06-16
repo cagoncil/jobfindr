@@ -1,0 +1,232 @@
+nav, nav a {
+    color: white;
+  /*  text-transform: uppercase;*/
+    font-family: "PT Sans";
+    font-weight: 500;
+    font-size: 1.05em;
+    text-decoration: none;
+  }
+  
+  nav ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    list-style: none;
+    display: flex;
+    padding-right: 150px;
+    marginBlock-start: 0;
+    marginBlock-end: 0;
+  }
+  
+  nav span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 150px;
+    font-weight: 600;
+    font-size: 2em;
+    font-family: 'PT Sans';
+    height: 100px;
+    line-height: 100px;
+  }
+  
+  nav li {
+    padding-left: 2em;
+    height: 100px;
+    line-height: 100px;
+  }
+  
+    #nav + .navBtn i {
+      -webkit-transition: transform 0.2s ease;
+      -moz-transition: transform 0.2s ease;
+      -o-transition: transform 0.2s ease;
+      transition: transform 0.2s ease;
+    }
+  
+    #nav:checked + .navBtn i {
+      background: #324EA3;
+    }
+  
+    #nav:checked + .navBtn i:nth-child(1) {
+      transform: translateY(5px) rotate(-135deg);
+    }
+  
+    #nav:checked + .navBtn i:nth-child(2) {
+      transform: translateY(-5px) rotate(135deg);
+    }
+  
+    #nav:checked + label.navBtn {
+      transform: translateX(-17px);
+    }
+  
+    #nav:checked ~ .navWrapper {
+      z-index: 9990;
+  /*      transform: scale(1);*/
+      visibility: visible;
+    }
+  
+    #nav:checked ~ .navWrapper ul li a {
+      transform: translateX(0);
+    }
+  
+    .hidden {
+      display: none;
+    }
+
+    .registerBtn {
+      border: 2px solid #fff;
+      background: #324EA3;
+      color: #fff;
+    }
+  
+    .registerBtn:hover {
+      background: #fff;
+      color: #324EA3;
+    }
+
+    .registerBtn:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.35);
+      background: #fff;
+      color: #324EA3;
+    }
+  
+  
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  nav span {
+    padding-left: 10vw;
+  }
+
+  #nav:checked + label.navBtn {
+    transform: translateX(0);
+  }
+
+}
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+/*@media (min-width: 768px) and (max-width: 1024px) {
+
+}*/
+
+
+/* ========= NAV BREAK POINT ========= */
+@media screen and (max-width: 864px) {
+
+  body.fixedPos {
+    position: fixed;
+    overflow-y: scroll;
+  }
+
+  nav li {
+    padding-left: 0;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .navWrapper {
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 100%; /* used to be 50% */
+    height: 100%; /* used to be 100% */
+    background: #fff;
+    /*transform: scale(0);*/ /* necessary to make invisible nav links unclickable */
+    visibility: hidden;
+  }
+
+  .navWrapper ul {
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding-right: 10vw;
+    line-height: 2em;
+  }
+
+  .navWrapper ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: right;
+    marginBottom: 10px;
+  }
+
+  .navWrapper ul li a {
+    padding: 10px 0;
+    color: #324EA3;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+  }
+
+  /* button.registerBtn {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    color: #324EA3;
+    background: #fff;
+  } */
+
+/*  .navWrapper ul li a::before {
+    bottom: 10px;
+    background-color: #324EA3;
+  }*/
+
+
+  .navBtn {
+    position: absolute; /* used to be fixed */
+    top: 29px;
+    right: 10vw;
+    display: block;
+    cursor: pointer;
+    z-index: 9998;
+  }
+
+  .navBtn i {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background: #fff;
+  }
+
+  .navBtn i:nth-child(1) {
+    margin-top: calc((2em - 15px - 3px)/2);
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  .navBtn i:nth-child(2) {
+    margin-top: 6px;
+    marginBottom: calc((2em - 15px - 3px)/2);
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  #nav:checked + label.navBtn {
+    right: -10vw;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  nav span {
+    padding-left: 10vw;
+  }
+
+  nav ul {
+    padding: 0;
+    margin-right: 10vw;
+  }
+
+}

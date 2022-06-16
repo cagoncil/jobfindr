@@ -1,0 +1,88 @@
+
+.Landing {
+    min-height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-top: 10vh;
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+}
+
+.container img {
+    padding: 0 3.5em 0 5em;
+    max-width: 60vw;
+}
+
+.container div {
+    padding: 3.5em 7.5em 0 0.5em;
+    max-width: 40vw;
+    color: #263b7c;
+    font-family: 'Playfair Display';
+    font-size: 1.3em;
+    margin: auto 0;
+}
+
+.blueMobile {
+  display: none;
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .blueMobile {
+    display: block;
+    background: #324EA3;
+    height: 11vh;
+  }
+
+  .Landing {
+    overflow-x: hidden;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+    .Landing {
+      overflow-y: auto;
+    }
+
+    .blueMobile {
+      display: block;
+      background: #324EA3;
+      height: 6vh;
+    }
+    
+    .container {
+      flex-direction: column;
+    }
+  
+      .container img, .container div {
+        max-width: 80vw;
+      }
+  
+      .container img {
+        padding: 0;
+      }
+  
+      .container div {
+        padding: 0;
+        text-align: center;
+      }
+        
+}
