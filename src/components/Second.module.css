@@ -6,7 +6,8 @@
     background: #d1dbf0;
     color: #263b7c;
     /*background: linear-gradient(to bottom, #fff, #d1dbf0);*/
-    padding: 10em;
+    padding: 8em;
+    margin: auto;
     font-family: 'Playfair Display';
   }
 
@@ -25,11 +26,11 @@
 @media (min-width: 320px) and (max-width: 480px) {
 
   .second {
-    padding: 2em;
+    padding: 5em;
   }
 
   .second h2 {
-    padding: 2em 0 1em;
+    padding-bottom: 1em;
   }
 
 }
