@@ -14,8 +14,8 @@ nav, nav a {
     list-style: none;
     display: flex;
     padding-right: 150px;
-    marginBlock-start: 0;
-    marginBlock-end: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
   
   nav span {

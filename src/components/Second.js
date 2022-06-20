@@ -24,7 +24,7 @@ const Second = () => {
                   backgroundColor: (theme) =>
                     theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
                 }}
-                elevation={altitude} 
+                elevation={altitude}
               >
               </Paper>
             </Grid>
